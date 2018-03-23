@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SF Crime</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+<!--  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script> -->
+  <style>
+    #pie {
+      width: 100%;
+      height: 100%;
+    }
+
+    #gauge {
+      width: 100%;
+      height: 100%;
+    }
+
+    #bubble {
+      text-align: center;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+<div class="container-fluid" style="padding: 2%;">
+  <div class="jumbotron" style="max_width: 90%; margin: 1%">
+    <h1 style="text-align: center;">San Francisco Police Incidents Dashboard</h1>
+    <p style="text-align: center;">Use the interactive chart and menus below to explore the dataset</p><br>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-12" style="background-color:white; padding: 2%;">
+<!--      <div id="main_chart"><h2><center>Place holder for the main plot (iframe)</center></h2></div> -->
+      <iframe width="100%" height="520" frameborder="0" src="https://alfaiabdul.carto.com/builder/f91d64df-9bc6-466b-9fb4-8fa4a353932e/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-4" style="background-color:white; padding: 2%;">
+      <h5>Types of Incidents</h5>
+      <p>Use the radio buttons below to view data related to specific types of incidents</p>
+      <form>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="">Violent
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="">Non-violent
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" value="">Other
+        </label>
+      </form>
+    </div>
+    <div class="col-sm-12 col-md-3" style="background-color:white; padding: 2%;">
+        <div id="years">
+            <h5>Data for Specific Years</h5>
+            <p>Use the dropdown menu below to view data for a specific year:</p>
+            <form>
+                <label for="sel2">Mutiple select list (hold shift to select more than one):</label>
+                <select multiple class="form-control" id="sel2">
+                  <option>2017</option>
+                  <option>2016</option>
+                  <option>2015</option>
+                  <option>etc.</option>
+                </select>
+            </form>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-5" style="background-color:white; padding: 2%;">
+        <div id="neighbor_hood">
+            <h5>Neighborhood Data</h5>
+            <p>Use the dropdown menu below to view data for a specific neighborhood:</p>
+            <form>
+                <label for="sel2">Mutiple select list:</label>
+                <select multiple class="form-control" id="sel2">
+                  <option>Neighborhood</option>
+                  <option>Neighborhood</option>
+                  <option>Neighborhood</option>
+                  <option>And more...</option>
+                </select>
+            </form>
+        </div>
+    </div>
+  </div>
+</div>
+<!-- <script src="app.js"></script> -->
+</body>
+</html>
